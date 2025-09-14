@@ -4,3 +4,6 @@ matplotlib
 seaborn
 scikit-learn
 reportlab
+Pillow
+transformers
+torch
