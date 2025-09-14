@@ -117,11 +117,12 @@ def generate_combined_html_report(plots_with_desc, filename="EV_Sales_Analysis_R
 
     for i, (fig, desc) in enumerate(plots_with_desc):
         div_id = f"plot_{i}"
-        fig_html = pio.to_html(fig, include_plotlyjs=False, full_html=False, div_id=div_id)
+        # Include plotlyjs only once for the first chart
+        include_plotlyjs = True if i == 0 else False
+        fig_html = pio.to_html(fig, include_plotlyjs=include_plotlyjs, full_html=False, div_id=div_id)
         html_content += f'<div class="chart-container">{fig_html}<p class="description">{desc}</p></div>'
 
     html_content += """
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </body>
     </html>
     """
