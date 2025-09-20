@@ -59,7 +59,7 @@ Here are types of findings the report may present (you can fill actual numbers):
 ## How to Run / Use
 
 1. Clone the repository.
-2. Ensure required libraries are installed (list them in `requir.txt` if not already).
+2. Ensure required libraries are installed (list them in `re.txt` if not already).
 3. Run `ev.py` to process data and generate outputs.
 4. View the generated report (`EV_Sales_Analysis_Report.html`) or PDF version.
 
